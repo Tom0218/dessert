@@ -1,35 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Hentaigana:wght@200..900&display=swap");
 body {
   margin: 0;
-  background-color: #fbe7af;
+  background-color: #FFF8DC;
   position: relative;
 }
+p{
+  font-family:'Courier New', Courier, monospace;
+}
+
 body::after {
   content: "";
   width: 500px;
   height: 500px;
-  background-color: #aa6e6e;
   position: absolute;
   left: 0;
   bottom: 7%;
   z-index: -1;
 }
-
 .page {
   width: 90%;
   margin: 0 5%;
   margin-top: 5%;
   display: flex;
 }
-
 .header {
   height: 15vh;
   position: relative;
 }
-.header .headerSquare {
+/*header 方塊*/
+.header .headerSquare { 
   width: 100px;
   height: 100px;
-  background-color: #aa6e6e;
+  background-color: #8B4513;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.header .headerSquare p{
+  color: white;
+}
+
 .header .hanburger {
   position: absolute;
   right: 0;
@@ -56,6 +67,7 @@ body::after {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 100% 0%;
+  
 }
 
 .onSale {
@@ -73,142 +85,97 @@ body::after {
 }
 .onSale .onSaleImgs .saleImg1 {
   width: 30%;
-  height: 100%;
+  
   background-image: url("../../cakePhoto/3.png");
+  display: flex;
+  align-items:end;
+  justify-content: center;
   background-size: contain;
   background-repeat: no-repeat;
-  position: relative;
+  background-position: center; /* 讓圖片置中 */
+  background-size: contain; /* 確保圖片完整顯示 */
+  
 }
-.onSale .onSaleImgs .saleImg1 .saleBtn1 {
-  width: 50%;
-  height: 15%;
-  color: white;
-  font-size: 20pt;
-  border: 0;
-  background-color: #aa6e6e;
-  position: absolute;
-  bottom: 20px;
-  left: 50px;
-}
+
 .onSale .onSaleImgs .saleImg2 {
   width: 30%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
   background-image: url("../../cakePhoto/2.png");
   background-size: contain;
   background-repeat: no-repeat;
-  position: relative;
+  background-position: center; /* 讓圖片置中 */
+  background-size: contain; /* 確保圖片完整顯示 */
 }
-.onSale .onSaleImgs .saleImg2 .saleBtn1 {
-  width: 50%;
-  height: 15%;
-  color: white;
-  font-size: 20pt;
-  border: 0;
-  background-color: #aa6e6e;
-  position: absolute;
-  bottom: 20px;
-  left: 50px;
-}
+
 .onSale .onSaleImgs .saleImg3 {
   width: 30%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
   background-image: url("../../cakePhoto/4.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 100% 0%;
-  position: relative;
+  background-position: center; /* 讓圖片置中 */
+  background-size: contain; /* 確保圖片完整顯示 */
 }
-.onSale .onSaleImgs .saleImg3 .saleBtn1 {
-  width: 50%;
-  height: 15%;
-  color: white;
-  font-size: 20pt;
-  border: 0;
-  background-color: #aa6e6e;
-  position: absolute;
-  bottom: 20px;
-  left: 80px;
+
+.saleBtn{
+    color: white;
+    font-size: 20pt;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 4%;
+    &:hover{
+      transition: 0.6s;
+      font-size: 40px;
+    }
 }
 
 .news {
-  height: 80vh;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 .news .cradsArea {
-  height: 60vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 5%;
 }
-.news .cradsArea .crad1 {
+.news .cradsArea .crad1,.news .cradsArea .crad1,.news .cradsArea .crad2, .news .cradsArea .crad3 {
   height: 90%;
   width: 30%;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.news .cradsArea .crad1 img {
+.news .cradsArea  img {
   width: 100%;
 }
-.news .cradsArea .crad1 p {
-  width: 90%;
+.news .cradsArea  p {
   margin: 0 5%;
 }
-.news .cradsArea .crad1 .cradBtn {
-  width: 33%;
-  height: 10%;
-  font-size: 16pt;
-  color: white;
-  margin-top: 20px;
-  margin-left: 40px;
-  background-color: #030303;
-}
-.news .cradsArea .crad2 {
-  height: 90%;
+
+.cradBtn{
   width: 30%;
-  background-color: #fff;
-}
-.news .cradsArea .crad2 img {
-  width: 100%;
-}
-.news .cradsArea .crad2 p {
-  width: 90%;
-  margin: 0 5%;
-}
-.news .cradsArea .crad2 .cradBtn {
-  width: 33%;
-  height: 10%;
   font-size: 16pt;
   color: white;
-  margin-top: 20px;
-  margin-left: 40px;
-  background-color: #030303;
+  background-color: #d5a4b1;
+  border: 0px;
+  padding: 3%;
+  margin:5%;
+  border-radius: 5%;
 }
-.news .cradsArea .crad3 {
-  height: 90%;
-  width: 30%;
-  background-color: #fff;
-}
-.news .cradsArea .crad3 img {
-  width: 100%;
-}
-.news .cradsArea .crad3 p {
-  width: 90%;
-  margin: 0 5%;
-}
-.news .cradsArea .crad3 .cradBtn {
-  width: 33%;
-  height: 10%;
-  font-size: 16pt;
-  color: white;
-  margin-top: 20px;
-  margin-left: 40px;
-  background-color: #030303;
-}
+
 .news .newBtn {
   width: 25%;
   height: 10%;
-  background-color: #aa6e6e;
+  background-color: #d5a4b1;
   border: 0;
   color: white;
   font-size: 24pt;
@@ -242,7 +209,7 @@ body::after {
   height: 10vh;
   width: 100%;
   margin: 0;
-  background-color: #aa6e6e;
+  background-color: #d5a4b1;
   display: flex;
   justify-content: center;
   font-size: 20pt;
